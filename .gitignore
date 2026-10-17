@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.openai/
+node_modules/
+build/
+*.log
+*.zip
+.env
+.env.*
