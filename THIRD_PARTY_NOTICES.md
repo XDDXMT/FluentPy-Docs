@@ -4,7 +4,7 @@
 
 - Source: https://github.com/microsoft/fluentui-system-icons
 - Copyright (c) 2020 Microsoft Corporation. MIT licensed.
-- Bundled resources: 106 SVG icons in `dist/assets/icons/`.
+- Bundled resources: 107 SVG icons in `dist/assets/icons/`.
 - Complete license: `dist/assets/icons-LICENSE.txt`.
 - FluentPy's own brand mark is in `dist/assets/mark.svg`.
 
