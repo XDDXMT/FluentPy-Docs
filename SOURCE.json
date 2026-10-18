@@ -1,7 +1,7 @@
 {
   "component_repository": "https://github.com/XDDXMT/FluentPy",
   "component_version": "0.7.0",
-  "component_commit": "b33f8d6f8f6da38c3df26cbc89fb827466a3bab2",
+  "component_commit": "b67af97be4e8c16ab6c5af133490ba036d4f6bc9",
   "component_worktree_dirty": false,
   "documentation_directory": "sites/fluentpy-docs",
   "sha256": {
@@ -389,12 +389,12 @@
     "dist/assets/previews/workbench-tab-context-dark.png": "b8af77cf3eeefe310cf673bba7b8928d17202bfadfe67e45f716fae38f190b99",
     "dist/assets/previews/workbench-tab-context-light.png": "7a605fda434d8ea90289beef4c5ab27e6cf9eb7885a61f25c42f49daa896400c",
     "dist/data.js": "7c133eb35e62dfce0edabc2a1807b7473405bb662b5373032c15ea90d0464cdd",
-    "dist/index.html": "0953452a19301a90ce972ac68eab227a6840e78e34475e98cd299b170ba0941a",
+    "dist/index.html": "100907409905610c0d6eb5a7dc23db1fe2480d715367a854ce82e880db8fd028",
     "dist/migration.css": "4cab3df99e76eb1aee21d14a820e5bbf6f7504696b8148d27da9ea9c117f47ed",
     "dist/migration.js": "2e82104ff87fb1e5b5f257cd84686f4982af66589fa38957a26197a72b2d1fe9",
     "dist/native-flow.css": "518a67260bf48179bd31504613ed3e9552c30a8985e8975e55870e878e9d6026",
     "dist/native-flow.js": "71133019d7bdb281560099be39bcfca97ffad6c947ea49982c7a1026bbd3b7da",
-    "dist/styles.css": "8996eaa2c8c021f8b938edabf09d982eccc6f1c7b28188b3a0a24643c0e46209",
+    "dist/styles.css": "a5d5fd11d5e1f98196b9b4dc3c74168bdc7efaf87b61beeb429026d7872f342c",
     "dist/workbench-home.css": "a77b9d95f57d6f29b6b27d5eba5e11eb8ca4c26252ed6730c79c79906a399222",
     "package_deploy.py": "74e47a185281bc438018f3d3d3fe28c4f7776b0538a08cd3207bf9b8aea0b903",
     "requirements.txt": "53233e8dfbed17a27fb6404f34b68fe2a8d00d68c743c4e6f4ac073b2833bab2",
