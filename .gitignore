@@ -9,3 +9,5 @@ build/
 *.zip
 .env
 .env.*
+# Capture tools are maintained in the component repository.
+/capture_*.py
