@@ -1,7 +1,7 @@
 {
   "component_repository": "https://github.com/XDDXMT/FluentPy",
   "component_version": "0.7.2",
-  "component_commit": "29ca7e60dae9c2a852e9323e0ce5e4fe88fcd363",
+  "component_commit": "ed0de65433b5db29aa4014a670eecd707ca58ff8",
   "component_worktree_dirty": false,
   "documentation_directory": "sites/fluentpy-docs",
   "sha256": {
@@ -10,7 +10,7 @@
     "LICENSE": "e2e06bc0821c2016b45935554bdc66e1ccee1832d8fe2ac2200c9eb6d9599106",
     "README.md": "ae682b76ed9302d83beb5f19dd09c4c5d965ddc8e5302e63e2fe55e2786bde31",
     "THIRD_PARTY_NOTICES.md": "c851ce832af5e3c2d52275b7e7e517d79c9d6136184ef9f82403cc4b4dc89197",
-    "build_content.py": "d33c18e74c84194401ce60c802bed396c4e00239f94c2a03918b2abe0c80feaa",
+    "build_content.py": "a6fee6938c9c51974921664ef6ebc164a567c2ecdc1c30a172e63fe4e8fa65c6",
     "dist/app.js": "1c073b02b2189f1e2f5993e6f282ad20d8e036632d3a2764922e620589c7f31e",
     "dist/assets/FluentPy-LICENSE.txt": "e2e06bc0821c2016b45935554bdc66e1ccee1832d8fe2ac2200c9eb6d9599106",
     "dist/assets/home-aurora.svg": "c0cddfb14b6305e89edeba4081998d7006ac6fcdb936c08169a0e6b0ab4890e4",
@@ -364,18 +364,18 @@
     "dist/assets/previews/workbench-declarations-light.png": "8c2e114d107ca81e5c2d6a9554613d4f54c15e6bde14faec563e4b93161333d3",
     "dist/assets/previews/workbench-tab-context-dark.png": "b8af77cf3eeefe310cf673bba7b8928d17202bfadfe67e45f716fae38f190b99",
     "dist/assets/previews/workbench-tab-context-light.png": "7a605fda434d8ea90289beef4c5ab27e6cf9eb7885a61f25c42f49daa896400c",
-    "dist/data.js": "7fce44c5108081c7bf8d2f9e41c74a20be5e71cda3d83227903e3ec808f0b2b6",
-    "dist/index.html": "ce6d7b07db7bd9cfead4abe25efb9830902268813395b4ba4c26d8ed9f73296d",
+    "dist/data.js": "7c190a6839ae01087cbb4c83463bb12759c8c8887a4ae09a9acc676f36adff01",
+    "dist/index.html": "68fa5997fa52c312451ba476300f4af03cfbd9fb96e2d3349ebaab4d1be9120c",
     "dist/migration.css": "4cab3df99e76eb1aee21d14a820e5bbf6f7504696b8148d27da9ea9c117f47ed",
     "dist/migration.js": "2e82104ff87fb1e5b5f257cd84686f4982af66589fa38957a26197a72b2d1fe9",
     "dist/native-flow.css": "518a67260bf48179bd31504613ed3e9552c30a8985e8975e55870e878e9d6026",
     "dist/native-flow.js": "71133019d7bdb281560099be39bcfca97ffad6c947ea49982c7a1026bbd3b7da",
     "dist/styles.css": "a5d5fd11d5e1f98196b9b4dc3c74168bdc7efaf87b61beeb429026d7872f342c",
     "dist/workbench-home.css": "a77b9d95f57d6f29b6b27d5eba5e11eb8ca4c26252ed6730c79c79906a399222",
-    "package_deploy.py": "74e47a185281bc438018f3d3d3fe28c4f7776b0538a08cd3207bf9b8aea0b903",
+    "package_deploy.py": "56c0fa3aa5af151b35f7e1c4bcca4a21b03df03b1c04c46d809fe3311098b512",
     "requirements.txt": "53233e8dfbed17a27fb6404f34b68fe2a8d00d68c743c4e6f4ac073b2833bab2",
-    "source_project.py": "7cd0768a87e2530eca43329fc34b60becbcf6aff7cdd39f744b6686e181d3185",
-    "validate_site.py": "a2e656f335a58749c84f5f34980f87c9bb4702d8ccad61c003da2e396267a032",
+    "source_project.py": "5a1a7fa5850ae2a771cb30c10b7700a37b386376e6d4ed623ffefabcc5acc1c0",
+    "validate_site.py": "e6d6d12b80cad09aefe064f0edf7aacfc43d1105b0d6945d714515a1556cf0de",
     "启动本地文档.bat": "b67ffeab230c608b1d89e761c56481c7945e0a482ae8574479edc3e77a25315a"
   }
 }
