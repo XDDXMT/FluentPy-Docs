@@ -1,0 +1,27 @@
+{
+  "poster": "D:\\文档\\fluentpy\\sites\\fluentpy-docs\\dist\\assets\\previews\\showcase-light.png",
+  "dimensions": [
+    1120,
+    780
+  ],
+  "animation": {
+    "path": "D:\\文档\\fluentpy\\sites\\fluentpy-docs\\dist\\assets\\previews\\showcase-light.gif",
+    "dimensions": [
+      1120,
+      780
+    ],
+    "bytes": 1004307,
+    "sampled_frames": 89,
+    "encoded_frames": 32,
+    "duration_ms": 8000,
+    "mean_interval_ms": 90.68181818181819,
+    "native_control_actions": 10,
+    "unavailable_compositor_frames_skipped": 8,
+    "real_Qt_widget_grabs_only": true,
+    "desktop_pointer_moved": false
+  },
+  "theme": "light",
+  "callback_errors": [],
+  "qt_messages": [],
+  "desktop_visible_roots": []
+}

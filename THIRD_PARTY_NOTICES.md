@@ -4,8 +4,9 @@
 
 - Source: https://github.com/microsoft/fluentui-system-icons
 - Copyright (c) 2020 Microsoft Corporation. MIT licensed.
-- Bundled resources: 107 SVG icons in `dist/assets/icons/`.
-- Complete license: `dist/assets/icons-LICENSE.txt`.
+- Bundled resources: 2624 Microsoft SVG icons named `ic_fluent_*` in `dist/assets/icons/`.
+- The additional `fluentpy_leaf_24_regular.svg` is independently drawn by FluentPy under the project's MIT license.
+- Complete license: `dist/assets/icons-LICENSE.txt`; upstream notices: `dist/assets/icons-NOTICE.txt`; pinned inventory: `dist/assets/icons-UPSTREAM.json`.
 - FluentPy's own brand mark is in `dist/assets/mark.svg`.
 
 ## Qt for Python
