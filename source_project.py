@@ -1,4 +1,4 @@
-"""Locate FluentPy when this website is bundled or checked out independently."""
+"""Locate the adjacent FluentPy checkout for API extraction and Qt captures."""
 
 from __future__ import annotations
 
@@ -16,7 +16,6 @@ def source_root() -> Path:
         [Path(configured).expanduser()]
         if configured
         else [
-            SITE.parents[1],
             SITE.parent / "FluentPy",
             SITE.parent / "fluentpy",
         ]
@@ -30,12 +29,6 @@ def source_root() -> Path:
         "FluentPy-Docs or set FLUENTPY_SOURCE_ROOT to its absolute path. "
         "Serving the existing dist/ does not require library sources."
     )
-
-
-def repository_root() -> Path:
-    """Keep deployment artifacts inside the repository that owns this website."""
-    bundled = SITE.parents[1]
-    return bundled if (bundled / "src/fluentpy/__init__.py").is_file() else SITE
 
 
 def source_version() -> str:

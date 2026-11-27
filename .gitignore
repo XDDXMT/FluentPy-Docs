@@ -9,5 +9,6 @@ build/
 *.zip
 .env
 .env.*
-# Capture tools are maintained in the component repository.
+# Generated capture reports and legacy local script copies.
+/dist/assets/previews/*-validation.json
 /capture_*.py

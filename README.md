@@ -1,66 +1,63 @@
 # FluentPy Docs
 
-[官网](https://fluentpy.mcxmcl.cn/) · [组件库源码](https://github.com/XDDXMT/FluentPy) · [文档问题](https://github.com/XDDXMT/FluentPy-Docs/issues)
+[官网](https://fluentpy.mcxmcl.cn/) · [中文文档](https://fluentpy.mcxmcl.cn/docs/) · [组件库源码](https://github.com/XDDXMT/FluentPy) · [部署包](https://github.com/XDDXMT/FluentPy-Docs/releases/latest) · [文档问题](https://github.com/XDDXMT/FluentPy-Docs/issues)
 
-FluentPy 0.8.1 中文文档的独立开源仓库。首页保留项目简介、Qt 接口演示和 C 流程说明，并展示新版工作台截图。包含网站 HTML、CSS、JavaScript、全部静态页面数据、2625 个 SVG 图标、真实 Qt 控件截图和 GIF，以及内容生成、校验和打包脚本。项目采用 [MIT 许可证](LICENSE)。
+FluentPy 官网和中文文档的源码仓库。文档包括入门教程、组件用法、API 与性能说明，也收录实际运行的 Qt 工作台截图和交互动图。项目采用 [MIT 许可证](LICENSE)。
 
-## 直接预览
+## 本地预览
 
-```sh
+```console
 git clone https://github.com/XDDXMT/FluentPy-Docs.git
 cd FluentPy-Docs
-python -m http.server 8767 --bind 0.0.0.0 --directory dist
+python preview_site.py
 ```
 
-打开 <http://127.0.0.1:8767/#/introduction>。Windows 可双击 `启动本地文档.bat`。现成的 `dist/` 可独立预览和部署，无需 Node.js、Qt 或 C 编译器；局域网访问使用本机实际 IP。
+在 [本地首页](http://127.0.0.1:8768/) 和 [本地文档](http://127.0.0.1:8768/docs/) 查看完整网站。预览使用仓库里的静态资源，只需要 Python。可用 `--port` 指定端口。
 
-## 修改与生成
+单独预览文档时，可以双击 Windows 下的 `启动本地文档.bat`，或运行以下命令后打开 [文档简介](http://127.0.0.1:8767/#/introduction)。
 
-| 位置 | 内容 |
+```console
+python -m http.server 8767 --bind 127.0.0.1 --directory dist
+```
+
+## 修改文档
+
+| 路径 | 内容 |
 | --- | --- |
-| `dist/index.html`、`dist/styles.css`、`dist/app.js` | 布局、主题、导航、搜索、示例与 API 视图 |
-| `build_content.py` | 组件内容、分类与源码接口提取 |
-| `dist/data.js` | 生成的页面数据，不直接编辑 |
-| `dist/assets/` | 本地图片、GIF、SVG 与许可文件 |
-| `dist/native-flow.*`、`dist/migration.*` | C 后端说明和 Qt 接口过渡动画 |
-| `validate_site.py`、`package_deploy.py` | 校验与完整静态包 |
-| `SOURCE.json` | 本次同步对应的组件库提交和文件校验值 |
+| [docs/](docs/) | Markdown 组件指南、构建和发布说明 |
+| [home/dist/](home/dist/) | 展示主页及资源 |
+| [dist/](dist/) | 文档站的界面、页面数据、配图与图标 |
+| [build_content.py](build_content.py) | 生成页面数据、提取组件 API |
+| [tools/](tools/) | Qt 控件截图和动图录制 |
+| [validate_site.py](validate_site.py) | 检查文档资源、链接和示例代码 |
 
-编辑 HTML、CSS 或 JS 后即可预览。修改文档内容、提取 API 时，需要单独检出组件库：
+编辑网页正文时修改 `build_content.py`，然后重新生成 `dist/data.js`。提取 API、运行文档示例或录制配图时，脚本会使用相邻的 FluentPy 源码。
 
-```sh
+```console
 git clone https://github.com/XDDXMT/FluentPy.git ../FluentPy
 python -m pip install -e ../FluentPy
 python -m pip install -r requirements.txt
 python build_content.py
 python validate_site.py
+node --test tests/icon-catalog.test.cjs
 ```
 
-脚本自动寻找相邻的 `FluentPy/`。如源码位于其他目录，先设置 `FLUENTPY_SOURCE_ROOT`：
+已有组件库检出时可使用该目录。源码在其他位置时，将 `FLUENTPY_SOURCE_ROOT` 设为其绝对路径。
 
-```powershell
-$env:FLUENTPY_SOURCE_ROOT = 'D:\path\to\FluentPy'
-python build_content.py
-python validate_site.py
-```
-
-Linux/macOS 使用 `export FLUENTPY_SOURCE_ROOT=/path/to/FluentPy`。组件库中的 Python 回退可在没有 C 扩展时运行；后端计算以 C 为首选加速，Qt 继续负责界面。
-
-Qt 截图和动图的录制工具集中在[组件库的文档目录](https://github.com/XDDXMT/FluentPy/tree/main/sites/fluentpy-docs)，本仓库保留生成后的媒体。需要重新录制时，在组件库根目录运行 `python sites/fluentpy-docs/capture_workbench_redesign.py` 或对应的 `capture_*.py`，然后重新生成、校验并同步文档。
+重新录制工作台静态截图可运行 `python -m tools.capture_workbench_redesign`。录制后运行 `python build_content.py` 和 `python validate_site.py`。各组件的录制入口在 [tools/](tools/) 内。
 
 ## 部署
 
-直接将 `dist/` 作为静态站点根目录，或生成包含全部资源和校验清单的压缩包：
+[文档 Releases](https://github.com/XDDXMT/FluentPy-Docs/releases) 提供完整网站和独立文档 ZIP。也可以从当前检出生成部署包。
 
-```sh
+```console
+python home/package_site.py --output build/releases/FluentPy-Website.zip
 python -m pip install -r requirements.txt
-python package_deploy.py --output build/FluentPy-docs-complete.zip
+python package_deploy.py --output build/releases/FluentPy-Docs.zip
 ```
 
-包内包含 `dist/`、`部署说明.txt` 和 `SHA256SUMS.txt`。覆盖部署时保留目录结构，将网站根目录指向 `dist/`。正式主页为 <https://fluentpy.mcxmcl.cn/>。服务器无需 Python、Qt 或 Node.js。
+完整网站包部署到站点根目录，首页在 `/`，文档在 `/docs/`。独立文档包的 `dist/` 可作为文档目录。两个包都附带部署说明和 SHA-256 校验清单，服务器可直接提供静态文件。
 
-## 同步与许可
+## 许可
 
-本仓库由组件库内的 `scripts/export_docs.py` 导出；对应版本见 `SOURCE.json`。组件库内保留文档副本，贡献文档时请明确修改的来源并同步相关内容。
-
-FluentPy 的网站源码及文档采用 MIT，保留原始版权声明与许可文本。Microsoft Fluent System Icons 的许可在 `dist/assets/icons-LICENSE.txt`；第三方声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。Qt/PySide6 及可选 PyQt6 的许可单独适用，本仓库不分发它们的二进制。
+FluentPy 的网站和文档采用 [MIT](LICENSE)。Microsoft Fluent System Icons 的许可在 [图标许可证](dist/assets/icons-LICENSE.txt)，Qt、PySide6 和可选 PyQt6 使用各自的许可证。查看 [第三方声明](THIRD_PARTY_NOTICES.md)。

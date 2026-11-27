@@ -17,11 +17,8 @@ from pathlib import Path, PurePosixPath
 
 from PIL import Image
 
-SITE = Path(__file__).resolve().parent
-from source_project import repository_root
-
-ROOT = repository_root()
-STATIC = SITE / "dist"
+ROOT = Path(__file__).resolve().parent
+STATIC = ROOT / "dist"
 PUBLIC_EXTENSIONS = {".html", ".css", ".js", ".svg", ".png", ".gif", ".txt", ".json"}
 CHINA_TIME = timezone(timedelta(hours=8))
 
@@ -86,8 +83,8 @@ def main():
         "--output",
         type=Path,
         default=ROOT
-        / "dist"
-        / "docs"
+        / "build"
+        / "deployment"
         / f"FluentPy-docs-complete-{datetime.now(CHINA_TIME):%Y%m%d}.zip",
     )
     args = parser.parse_args()
